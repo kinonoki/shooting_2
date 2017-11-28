@@ -28,6 +28,10 @@ void Start()
     bulletPos.x = -999;
     score = 0;
     
+<<<<<<< HEAD
+=======
+    PlayBGM("bgm_maoudamashii_8bit07.mp3");
+>>>>>>> e75c6d7b36e7c22ad11005980cf76e6a2341a260
 }
 
 // 1/60秒ごとに呼ばれる関数です。モデルの更新と画面の描画を行います。
