@@ -41,11 +41,7 @@ void Update()
     // 弾の移動
     if (bulletPos.x > -999) {
         bulletPos.x += 100 * Time::deltaTime;
-<<<<<<< HEAD
-        
-        // ターゲットと弾の当たり判定
-        Rect bulletRect(bulletPos, Vector2(32, 20));
-=======
+
 
         // ターゲットと弾の当たり判定
         Rect bulletRect(bulletPos, Vector2(32, 20));
@@ -54,7 +50,7 @@ void Update()
             bulletPos.x = -999; // 弾を発射可能な状態に戻す
         }
         
->>>>>>> ee564b3073dd2929d57a8f21cb92a2ffef308e46
+
         
         if (targetRect.Overlaps(bulletRect)) {
             score += 1;         // スコアの加算
@@ -70,7 +66,7 @@ void Update()
     // 雲の描画
     DrawImage("cloud1.png", cloudPos);
     
-<<<<<<< HEAD
+
     // 雲の移動
     if (cloudPos.x > -999) {
         cloudPos.x += 100 * Time::deltaTime;
@@ -81,8 +77,7 @@ void Update()
         }
     }
 
-=======
->>>>>>> 5844e0ccecb9a8a3c0411c0896ac8e6c94a590fe
+
     // 弾の描画
     if (bulletPos.x > -999) {
         DrawImage("bullet.png", bulletPos);
@@ -92,7 +87,7 @@ void Update()
     FillRect(Rect(cannonPos.x-10, -140, 20, 100), Color::blue);
     DrawImage("cannon.png", cannonPos);
     
-    //ここ小林
+
     cannonPos.y += pos;
     if(cannonPos.y == -50){
         pos *= -1;
