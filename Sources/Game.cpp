@@ -38,14 +38,21 @@ void Update()
 
     // 弾の移動
     if (bulletPos.x > -999) {
-        bulletPos.x += 10 * Time::deltaTime;
+        bulletPos.x += 100 * Time::deltaTime;
 
         // ターゲットと弾の当たり判定
         Rect bulletRect(bulletPos, Vector2(32, 20));
+        //小林
+        if (bulletPos.x > 320) {
+            bulletPos.x = -999; // 弾を発射可能な状態に戻す
+        }
+        
+        
         if (targetRect.Overlaps(bulletRect)) {
             score += 1;         // スコアの加算
             bulletPos.x = -999; // 弾を発射可能な状態に戻す
         }
+
     }
 
     // 背景の描画
