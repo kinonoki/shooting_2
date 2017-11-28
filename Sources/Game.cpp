@@ -54,6 +54,16 @@ void Update()
 
     // 雲の描画
     DrawImage("cloud1.png", cloudPos);
+    
+    // 雲の移動
+    if (cloudPos.x > -999) {
+        cloudPos.x += 100 * Time::deltaTime;
+        // 雲の移動判定
+        if (cloudPos.x >= 380) {
+            //雲を初期位置に戻す
+            cloudPos.x = -550;
+        }
+    }
 
     // 弾の描画
     if (bulletPos.x > -999) {
